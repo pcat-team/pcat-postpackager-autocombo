@@ -1,6 +1,6 @@
 {
   "name": "pcat-postpackager-autocombo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "请求combo",
   "main": "index.js",
   "scripts": {
