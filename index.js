@@ -56,7 +56,7 @@ function createRequireConfig(ret, conf, settings, opt) {
         return rz
     }
     var getId = function(_file) {
-        let file = res[_file]；
+        let file = res[_file];
          if(!file){
             fis.log.error("模块["+_file+"]不存在！")
         }
