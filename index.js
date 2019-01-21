@@ -243,15 +243,15 @@ function createRequireConfig(ret, conf, settings, opt) {
                     }).map(function(obj) {
                         return obj.url.replace(DOMAIN, '')
                     })
-                    comboJSRz.push('<script src="' + DOMAIN + COMBO_URL + urls.join(',') + '"></script>')
+                    comboJSRz.push('<script class=" defer" src="' + DOMAIN + COMBO_URL + urls.join(',') + '"></script>')
                     // ;[].push.apply(comboJSRz,thisComboJS.map(function(url){return url.replace(DOMAIN , '')}))
                 } else if (type < 0) {
                     unComboJSRzTop.push(thisComboJS.map(function(obj) {
-                        return '<script src="' + DOMAIN + obj.url + '"></script>'
+                        return '<script class=" defer" src="' + DOMAIN + obj.url + '"></script>'
                     }).join('\n'))
                 } else {
                     unComboJSRzLaster.push(thisComboJS.map(function(obj) {
-                        return '<script src="' + DOMAIN + obj.url + '"></script>'
+                        return '<script class=" defer" src="' + DOMAIN + obj.url + '"></script>'
                     }).join('\n'))
                 }
             })
@@ -289,11 +289,11 @@ function createRequireConfig(ret, conf, settings, opt) {
             //     ;[].push.apply(comboJSRz,thisComboJS.map(function(url){return url.replace(DOMAIN , '')}))
             //   }else if(type < 0){
             //     unComboJSRzTop.push(thisComboJS.map(function(url) {
-            //         return '<script src="'+ DOMAIN + url + '"></script>'
+            //         return '<script class=" defer" src="'+ DOMAIN + url + '"></script>'
             //      }).join('\n'))
             //   }else{
             //     unComboJSRzLaster.push(thisComboJS.map(function(url) {
-            //         return '<script src="' + DOMAIN + url + '"></script>'
+            //         return '<script class=" defer" src="' + DOMAIN + url + '"></script>'
             //      }).join('\n'))
             //   }
             // })
@@ -327,8 +327,8 @@ function createRequireConfig(ret, conf, settings, opt) {
             // })
             // console.log(comboJSRz,comboCSSRz)
             // console.log(oConfig.combo)
-            // let comboScripts = comboJS ? (oConfig.combo ? '<script src="' + oConfig.domain + oConfig.comboUrl + comboJS.map(function(url){return url.replace(DOMAIN , '')}).join(',') + '"></script>' : (comboJS.map(function(url) {
-            //                                 return '<script src="' + url + '"></script>'
+            // let comboScripts = comboJS ? (oConfig.combo ? '<script class=" defer" src="' + oConfig.domain + oConfig.comboUrl + comboJS.map(function(url){return url.replace(DOMAIN , '')}).join(',') + '"></script>' : (comboJS.map(function(url) {
+            //                                 return '<script class=" defer" src="' + url + '"></script>'
             //                              })).join('\n')) : '';
             // let comboLinks = comboCSS ? (oConfig.combo ? '<link href="' + oConfig.domain + oConfig.comboUrl + comboCSS.map(function(url){return url.replace(DOMAIN , '')}).join(',') + '" />' : (comboCSS.map(function(url) {
             //                               return '<link href="' + url + '"/>'
